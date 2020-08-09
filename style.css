@@ -1,10 +1,12 @@
-* {
+*,*::before,
+*::after {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
 :root {
+    --button-size: 100px;
 }
 
 .main_title {
@@ -32,9 +34,9 @@ a{
 }
 
 .button {
-    height: 100px;
-    width: 100px;
-    background: purple;
+    height: var(--button-size);
+    width: var(--button-size);
+    position: relative;
     border-radius: 50%;
 }
 
@@ -44,25 +46,88 @@ a{
 
 .button-image {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: var(--button-size);
+    width: var(--button-size);
     border-radius: 50%;
 }
 
 .button-label {
     height: 1rem;
-    background: purple;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
+.lesson-option {
+    background: yellowgreen;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 4rem;
+    width: 8rem;
+    transform: translate(-70%, -265%);
+}
+
+.practice-option {
+    background: lavender;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 4rem;
+    width: 8rem;
+    transform: translate(50%, -365%);
+}
+
+.option-button {
+    width: 6rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lesson-option-arrow {
+    position: absolute;
+    border-style: solid;
+    border-color: yellowgreen transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom: -7px;
+    transform: translateX(70px);
+}
+
+.practice-option-arrow {
+    position: absolute;
+    border-style: solid;
+    border-color: lavender transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom: -7px;
+    transform: translateX(-10px);
+}
+
+/*Position each of the skills*/
 .introduction-wrapper {
     background: lightgreen;
     position: absolute;
-    height: 100px;
-    width: 100px;
-    overflow-y:hidden;
-    top: 50%;
+    height: var(--button-size);
+    width: var(--button-size);
+    top: 50%; 
     right: 50%;
     bottom: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+.ipa-wrapper {
+    background: lightgreen;
+    position: absolute;
+    height: var(--button-size);
+    width: var(--button-size);
+    top: 75%;
+    right: 50%;
     left: 50%;
     margin-left: -50px;
     margin-top: -50px;
@@ -73,10 +138,16 @@ a{
     outline: none;
 }
 
+footer {
+    background: green;
+    height: 4rem;
+}
+
+/*
 #introduction-label {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-}
+}*/
