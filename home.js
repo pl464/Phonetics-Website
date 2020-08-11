@@ -24,7 +24,7 @@ class App {
                         option.classList.remove('options-open-animation');
                         option.classList.add('options-close-animation');
                     }
-//                    option.style.visibility = 'hidden';
+//                    option.style.visibility =  'hidden';
 //                    option.style.opacity = '0';
                 });
                 option.classList.remove('options-close-animation');

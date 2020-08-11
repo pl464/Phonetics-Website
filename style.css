@@ -7,14 +7,19 @@
 
 :root {
     --button-size: 100px;
+    --font-primary: 'Varela Round', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .main_title {
-    background: lightblue;
+/*    background: ;*/
     display: block;
     position: relative;
-    height: 5vh;
+    height: 4rem;
     text-align: center;
+    color: rgb(19, 108, 191);
+    padding: 10px;
 }
 
 html {
@@ -30,7 +35,7 @@ a {
     position: relative;
     height: 95vh;
     width: 100%;
-    background: pink;
+/*    background: pink;*/
 }
 
 .reference-line {
@@ -41,6 +46,9 @@ a {
     display: none;
 }
 
+.wrapper {
+/*    background-color: green;*/
+}
 .button {
     border: none;
     height: var(--button-size);
@@ -65,12 +73,13 @@ a {
 }
 
 .button-label {
+    font-family: var(--font-primary);
     height: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white
+    color: white;
 }
 
 .button-label:hover {
@@ -106,7 +115,7 @@ a {
         opacity: 0;
     }
     10% {
-        opacity: 0.25;
+        opacity: 0.5;
         transform: scale(0.5);
     }
     30% {
@@ -135,7 +144,7 @@ a {
 }
 
 .lesson-option {
-    background: yellowgreen;
+    background: #ECECEC;
     text-align: center;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -144,7 +153,7 @@ a {
 }
 
 .practice-option {
-    background: lavender;
+    background: #ECECEC;
     text-align: center;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -152,18 +161,10 @@ a {
     width: 8rem;
 }
 
-.option-button {
-    width: 6rem;
-    height: 2.5rem;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .lesson-option-arrow {
     position: absolute;
     border-style: solid;
-    border-color: yellowgreen transparent transparent transparent;
+    border-color: #ECECEC transparent transparent transparent;
     border-width: 18px 8px 0px 8px;
     bottom: -18px;
     transform: 
@@ -175,7 +176,7 @@ a {
 .practice-option-arrow {
     position: absolute;
     border-style: solid;
-    border-color: lavender transparent transparent transparent;
+    border-color: #ECECEC transparent transparent transparent;
     border-width: 18px 8px 0px 8px;
     bottom: -18px;
     transform: 
@@ -184,9 +185,52 @@ a {
         rotate(30deg);
 }
 
+.option-button:focus { outline: none }
+
+.lesson-option-button {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: var(--font-primary);
+    background: #8eeb6c;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 15px;
+    position: absolute;
+    top: 44%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 5px 0 1px #8ebb6c;
+}
+
+.practice-option-button {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: var(--font-primary);
+    background: #f2da6d;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 15px;
+    position: absolute;
+    top: 44%;
+    left: 78.25%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 5px 0 1px #f2ba6d;
+}
+
+.lesson-option-button:active {
+    box-shadow: 0px 0px 0 0px #8ebb6c;
+    transform: translate(-46%, -38%);
+}
+
+.practice-option-button:active {
+    box-shadow: 0px 0px 0 0px #8ebb6c;
+    transform: translate(-46%, -38%);
+}
+
 /*Position each of the skills*/
 .introduction-wrapper {
-    background: lightgreen;
     position: absolute;
     height: var(--button-size);
     width: var(--button-size);
@@ -199,7 +243,6 @@ a {
 }
 
 .ipa-wrapper {
-    background: lightgreen;
     position: absolute;
     height: var(--button-size);
     width: var(--button-size);
