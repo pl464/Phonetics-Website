@@ -20,11 +20,17 @@ class App {
                 
                 this.$buttons.forEach( (button) => {
                     let option = document.querySelector(`#${button.id}+.options`);
-                    option.style.visibility = 'hidden';
-                    option.style.opacity = '0';
+                    if (option.classList.contains('options-open-animation')) {
+                        option.classList.remove('options-open-animation');
+                        option.classList.add('options-close-animation');
+                    }
+//                    option.style.visibility = 'hidden';
+//                    option.style.opacity = '0';
                 });
-                option.style.visibility = 'visible';
-                option.style.opacity = '1';
+                option.classList.remove('options-close-animation');
+                option.classList.add('options-open-animation');
+//                option.style.visibility = 'visible';
+//                option.style.opacity = '1';
             });    
         });
         
