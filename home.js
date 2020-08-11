@@ -2,12 +2,12 @@ const BUTTON_SIZE = 100;
 
 class App {
     constructor (){
-        this.$button = document.querySelectorAll('.button');
+        this.$buttons = document.querySelectorAll('.button');
         this.addEventListeners();
     }
     
     addEventListeners() {
-        this.$button.forEach( (button) => {
+        this.$buttons.forEach( (button) => {
             button.addEventListener('click', event => {
                 const bound = event.target.getBoundingClientRect();
                 const hCenter = (bound.left + bound.right) / 2;
@@ -17,7 +17,14 @@ class App {
                 console.log("Button clicked");
                 console.log(button.id);
                 const option = document.querySelector(`#${button.id}+.options`);
-                option.style.display = 'flex';
+                
+                this.$buttons.forEach( (button) => {
+                    let option = document.querySelector(`#${button.id}+.options`);
+                    option.style.visibility = 'hidden';
+                    option.style.opacity = '0';
+                });
+                option.style.visibility = 'visible';
+                option.style.opacity = '1';
             });    
         });
         

@@ -21,7 +21,7 @@ html {
     background-color: #fafafa;
 }
 
-a{
+a {
     background: red;
     border-radius: 50%;
 }
@@ -29,7 +29,7 @@ a{
 .skill_tree {
     position: relative;
     height: 95vh;
-    width: 100vw;
+    width: 100%;
     background: pink;
 }
 
@@ -79,11 +79,13 @@ a{
 
 .options {
     position: absolute;
-    display: flex;
     column-gap: 50px;
     top: -65%;
     left: -6.5rem;
-    display: none;
+    display: flex;
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 250ms, visibility 250ms;
 }
 
 .lesson-option {
