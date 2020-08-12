@@ -1,0 +1,60 @@
+/* Base Template */
+*,*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-size: 100px;
+    --font-primary: 'Varela Round', sans-serif;
+    --font-main: 'Nunito Sans', sans-serif;
+    
+    --color-title: rgb(19, 108, 191);
+    
+    --width-min: 1000px;
+    font-family: var(--font-main);
+}
+
+.main_title {
+/*    background: ;*/
+    display: block;
+    position: relative;
+    height: 4rem;
+    text-align: center;
+    color: var(--color-title);
+    padding: 10px;
+}
+
+html {
+    min-width: var(--width-min);
+    background-color: #fafafa;
+}
+
+a {
+    background: pink;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+a:visited { color: inherit; }
+
+footer {
+    background: lightblue;
+    height: 4rem;
+}
+
+/*End Base Template*/
+
+.lesson-display {
+    background: pink;
+}
+
+.book_background {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    transform: scale(1.1);
+}
+

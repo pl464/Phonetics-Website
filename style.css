@@ -1,3 +1,4 @@
+/* Base template */
 *,*::before,
 *::after {
     margin:0;
@@ -8,8 +9,12 @@
 :root {
     --button-size: 100px;
     --font-primary: 'Varela Round', sans-serif;
-    font-family: 'Varela Round', sans-serif;
-    font-family: 'Nunito Sans', sans-serif;
+    --font-main: 'Nunito Sans', sans-serif;
+    
+    --color-title: rgb(19, 108, 191);
+    
+    --width-min: 600px;
+    font-family: var(--font-main);
 }
 
 .main_title {
@@ -18,7 +23,7 @@
     position: relative;
     height: 4rem;
     text-align: center;
-    color: rgb(19, 108, 191);
+    color: var(--color-title);
     padding: 10px;
 }
 
@@ -27,9 +32,21 @@ html {
 }
 
 a {
-    background: red;
+    background: pink;
+    text-decoration: none;
     border-radius: 50%;
 }
+
+a:visited {
+    color: inherit;
+}
+
+footer {
+    background: lightblue;
+    height: 4rem;
+}
+
+/*End base template*/
 
 .skill_tree {
     position: relative;
@@ -251,11 +268,6 @@ a {
     left: 50%;
     margin-left: -50px;
     margin-top: -50px;
-}
-
-footer {
-    background: lightblue;
-    height: 4rem;
 }
 
 /*
