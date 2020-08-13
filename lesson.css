@@ -17,6 +17,14 @@
     font-family: var(--font-main);
 }
 
+.reference-line {
+    width: 2px;
+    height: 100vw;
+    background-color: black;
+    margin: 0 auto;
+    display: none;
+}
+
 .main_title {
 /*    background: ;*/
     display: block;
@@ -48,13 +56,23 @@ footer {
 /*End Base Template*/
 
 .lesson-display {
-    background: pink;
+    background-color: pink;
+    height: 90vh;
+    width: 100%;
+    position: relative;
 }
 
 .book_background {
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    transform: scale(1.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+/*    ! ! ! MIN subject to change based off how text fits*/
+    min-width: 80em;
+    min-height: 50em;
+    max-width: 100%;
+    max-height: 100%;
+    height: 95vw;
+    width: 95vw;
 }
 
