@@ -13,7 +13,7 @@
     
     --color-title: rgb(19, 108, 191);
     
-    --width-min: 1000px;
+    --width-min: 600px;
     font-family: var(--font-main);
 }
 
@@ -48,13 +48,23 @@ footer {
 /*End Base Template*/
 
 .lesson-display {
+    display: block;
     background: pink;
+    position: relative;
+    height: 500px;
 }
 
 .book_background {
     display: block;
     margin: 0 auto;
     padding: 20px;
-    transform: scale(1.1);
+    position: absolute;
+    top: 50%; 
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -330px;
+    margin-top: -200px;
+    transform: scale(1.2);
 }
 
