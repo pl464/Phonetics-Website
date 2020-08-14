@@ -17,14 +17,6 @@
     font-family: var(--font-main);
 }
 
-.reference-line {
-    width: 2px;
-    height: 100vw;
-    background-color: black;
-    margin: 0 auto;
-    display: none;
-}
-
 .main_title {
 /*    background: ;*/
     display: block;
@@ -36,8 +28,10 @@
 }
 
 html {
-    min-width: var(--width-min);
-    background-color: #fafafa;
+    animation-name: fade_in;
+    animation-duration: 750ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 a {
@@ -55,29 +49,18 @@ footer {
 
 /*End Base Template*/
 
-.lesson-display {
+@keyframes fade_in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.lesson-wrapper {
     display: block;
     background: pink;
     position: relative;
-    height: 500px;
+    height: 80vh;
+/*    height: 500px;*/
 }
-
-/*
-.book_background {
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    position: absolute;
-    top: 50%; 
-    bottom: 50%;
-    left: 50%;
-    margin-left: -330px;
-    margin-top: -200px;
-    background-color: pink;
-    height: 90vh;
-    width: 100%;
-}
-*/
 
 .book_background {
   position: absolute;
@@ -85,11 +68,42 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 /*    ! ! ! MIN subject to change based off how text fits*/
+/*
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
     max-height: 100%;
-    width: 90vw;
-    height: 85vh;
+*/
+    width: 800px;
+/*    height: 1000px;*/
 }
 
+.lesson {
+  position: absolute;
+  top: 48%;
+  left: 49.9%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+    height: 380px;
+    background: lightgreen;
+    z-index: 1;
+}
+
+.left_page {
+    position: absolute;
+    background: orange;
+    left: 3px;
+    top: 3px;
+    width: 320px;
+    height: 375px;
+}
+
+.right_page {
+    position: absolute;
+    background: lavender;
+    right: 3px;
+    top: 3px;
+    width: 320px;
+    height: 375px;
+    text-align: right;
+}
