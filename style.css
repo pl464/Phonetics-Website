@@ -80,6 +80,8 @@ footer {
 
 .button-image:hover {
     cursor: pointer;
+    transform: scale(1.075);
+    filter: brightness(120%);
 }
 
 .button-image {
@@ -235,6 +237,9 @@ footer {
     transform: translate(-50%, -50%);
     box-shadow: 2px 5px 0 1px #f2ba6d;
 }
+
+.lesson-option-button:hover { cursor: pointer; }
+.practice-option-button:hover { cursor: pointer; }
 
 .lesson-option-button:active {
     box-shadow: 0px 0px 0 0px #8ebb6c;
