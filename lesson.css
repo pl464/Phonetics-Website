@@ -70,8 +70,6 @@ footer {
     opacity: 70%;
   transform: translate(-50.2%, -53.5%);
   width: 705px; height: 400px;
-    max-height: 100%;
-    max-width: 100%;
 background: skyblue;   
 }
 
@@ -81,8 +79,6 @@ background: skyblue;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px; height: 600px;
-    max-height: 100%;
-    max-width: 100%;
 /*    ! ! ! MIN subject to change based off how text fits*/
 /*
     min-width: 100%;
@@ -93,7 +89,7 @@ background: skyblue;
 /*    height: 1000px;*/
 }
 
-.lesson {
+.book {
   position: absolute;
     display: flex;
     column-gap: 50px;
@@ -131,18 +127,18 @@ background: skyblue;
 }
 
 @media (min-width:1200px) {
-    .book_background { width: 1200px; height: 900px; }
-    .book { width: 845px; height: 480px; }
-    .lesson { width: 99%; height: 99%; }
+    .book-background { width: 1200px; height: 900px; }
+    .book-wrapper { width: 1040px; height: 600px; }
+    .book { width: 99%; height: 99%; }
     
     .left_page { width: 45%; height: 99%; }
     .right_page { width: 45%; height: 99%; }
 }
 
 @media (min-width:1600px) {
-    .book_background { width: 1400px; height: 900px; }
-    .book {}
-    .lesson { width: 1225px; height: 800px; top: 52.5%; }
+    .book-background { width: 1450px; height: 900px; }
+    .book-wrapper { width: 1270px; height: 730px; }
+    .book { width: 99%; height: 99%; top: 50%; }
     
     .left_page { width: 45%; height: 99%; }
     .right_page { width: 45%; height: 99%; }
